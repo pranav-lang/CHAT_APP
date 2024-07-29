@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+{% block content %}
+
+   {% block loginMessage %}
+      <div class="alert alert-success" role="alert">
+      {{ session["name"] }} logged in!
+       </div>
+   {% endblock %}
+
+<div class="container message-container" id="message-container" style="min-height: 300px;background-color: white;border: 1px solid black;overflow-y: scroll;">
+</div>
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Message" aria-label="Message" id="msg">
+  <div class="input-group-append">
+    <button id="send" class="btn btn-outline-secondary" type="button">Send</button>
+  </div>
+</div>
+
+{% endblock content %}
